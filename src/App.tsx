@@ -30,7 +30,7 @@ function App() {
           element: <Search />,
         },
         {
-          path: "/type/:slug",
+          path: "/:type/:slug",
           element: <SingleGif />,
         },
       ],
