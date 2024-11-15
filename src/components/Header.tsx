@@ -11,7 +11,7 @@ const Header = () => {
   const [showCategory, setShowCategory] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-  const { gf, favorites, selectTab, setSelectTab } = useGifContext();
+  const { gf } = useGifContext();
 
   const fetchGifs = async () => {
     const { data } = await gf.categories();
@@ -21,14 +21,6 @@ const Header = () => {
   useEffect(() => {
     fetchGifs();
   }, []);
-
-  const navList = [
-    { menuName: "Reactions", navigateTo: "/reactions" },
-    { menuName: "Entertainment", navigateTo: "/entertainment" },
-    { menuName: "Sports", navigateTo: "/sports" },
-    { menuName: "Stickers", navigateTo: "/stickers" },
-    { menuName: "Artists", navigateTo: "/artists" },
-  ];
 
   return (
     <nav className="w-full p-4 shadow-md">
